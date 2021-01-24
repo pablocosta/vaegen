@@ -167,11 +167,11 @@ class SenteceVAE(nn.Module):
             runSequences = runSequences.masked_select(runMask)
 
             # prune input and hidden state according to local update
-            if len(running_seqs) > 0:
+            if len(runSequences) > 0:
                 inSequence = inSequence[runSequences]
                 hidden = hidden[:, runSequences]
 
-                running_seqs = torch.arange(0, len(runSequences), out=self.tensor()).long()
+                runSequences = torch.arange(0, len(runSequences), out=self.tensor()).long()
 
             t += 1
 
