@@ -1,6 +1,6 @@
-SOSToken = 0
-EOSToken = 1
-PADToken = 2
-UNKToken = 3
+SOSToken = 2
+EOSToken = 3
+PADToken = 0
+UNKToken = 1
 
 
